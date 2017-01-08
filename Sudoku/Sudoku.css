@@ -1,0 +1,61 @@
+input {
+	border: 1px dotted gray;
+	text-align: center;
+	font-size: 16pt;
+	width: 65%;
+}
+
+body {
+	background-image: url('sudoku.jpg');
+	background-size: 100%;
+	text-align: center;
+}
+
+#titolo {
+	position: relative;
+    left: 35%;
+	border: 3px double;
+	width: 30%;
+}
+
+table {
+	background-color: #AAAAAA;
+	border: 4px black;
+	border-style: solid;
+	width: 32%;
+	height: 70%;
+}
+
+td {
+	text-align: center;
+}
+
+.L, .O {
+	border-right: 2px;
+	border-right-style: solid;
+}
+
+.M, .P {
+	border-left: 2px;
+	border-left-style: solid;
+}
+
+.c, .f {
+	border-bottom: 2px;
+	border-bottom-style: solid;
+}
+
+.d, .g {
+	border-top: 2px;
+	border-top-style: solid;
+}
+
+button {
+  background: url('texture.png') no-repeat center;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0;
+  height: 25px;
+  width: 80px;
+}

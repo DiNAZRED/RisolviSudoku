@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			RISOLVI SUDOKU
+		</title>
+		<script src="Sudoku.js" >
+		</script>
+		<link rel="stylesheet" type="text/css" href="Sudoku.css">
+	</head>
+	<body onload="Inizio();">
+		<h1 id="titolo" >
+			RISOLVI SUDOKU
+		</h1>
+		<center>
+			<table>
+				<tr>
+					<td onclick="CambiaNumero( A1 );" >
+						<input type="text" id="A1" class="A a J" size="1" onblur="InserimentoNumero( A1, 0, 0 );"/>
+					</td>
+					<td onclick="CambiaNumero( A2 );" >
+						<input type="text" id="A2" class="A a K" size="1" onblur="InserimentoNumero( A2, 0, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( A3 );" >
+						<input type="text" id="A3" class="A a L" size="1" onblur="InserimentoNumero( A3, 0, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( B1 );" >
+						<input type="text" id="B1" class="B a M" size="1" onblur="InserimentoNumero( B1, 0, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( B2 );" >
+						<input type="text" id="B2" class="B a N" size="1" onblur="InserimentoNumero( B2, 0, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( B3 );" >
+						<input type="text" id="B3" class="B a O" size="1" onblur="InserimentoNumero( B3, 0, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( C1 );" >
+						<input type="text" id="C1" class="C a P" size="1" onblur="InserimentoNumero( C1, 0, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( C2 );" >
+						<input type="text" id="C2" class="C a Q" size="1" onblur="InserimentoNumero( C2, 0, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( C3 );" >
+						<input type="text" id="C3" class="C a R" size="1" onblur="InserimentoNumero( C3, 0, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( A4 );" >
+						<input type="text" id="A4" class="A b J" size="1" onblur="InserimentoNumero( A4, 1, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( A5 );" >
+						<input type="text" id="A5" class="A b K" size="1" onblur="InserimentoNumero( A5, 1, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( A6 );" >
+						<input type="text" id="A6" class="A b L" size="1" onblur="InserimentoNumero( A6, 1, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( B4 );" >
+						<input type="text" id="B4" class="B b M" size="1" onblur="InserimentoNumero( B4, 1, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( B5 );" >
+						<input type="text" id="B5" class="B b N" size="1" onblur="InserimentoNumero( B5, 1, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( B6 );" >
+						<input type="text" id="B6" class="B b O" size="1" onblur="InserimentoNumero( B6, 1, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( C4 );" >
+						<input type="text" id="C4" class="C b P" size="1" onblur="InserimentoNumero( C4, 1, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( C5 );" >
+						<input type="text" id="C5" class="C b Q" size="1" onblur="InserimentoNumero( C5, 1, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( C6 );" >
+						<input type="text" id="C6" class="C b R" size="1" onblur="InserimentoNumero( C6, 1, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( A7 );" >
+						<input type="text" id="A7" class="A c J" size="1" onblur="InserimentoNumero( A7, 2, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( A8 );" >
+						<input type="text" id="A8" class="A c K" size="1" onblur="InserimentoNumero( A8, 2, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( A9 );" >
+						<input type="text" id="A9" class="A c L" size="1" onblur="InserimentoNumero( A9, 2, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( B7 );" >
+						<input type="text" id="B7" class="B c M" size="1" onblur="InserimentoNumero( B7, 2, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( B8 );" >
+						<input type="text" id="B8" class="B c N" size="1" onblur="InserimentoNumero( B8, 2, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( B9 );" >
+						<input type="text" id="B9" class="B c O" size="1" onblur="InserimentoNumero( B9, 2, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( C7 );" >
+						<input type="text" id="C7" class="C c P" size="1" onblur="InserimentoNumero( C7, 2, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( C8 );" >
+						<input type="text" id="C8" class="C c Q" size="1" onblur="InserimentoNumero( C8, 2, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( C9 );" >
+						<input type="text" id="C9" class="C c R" size="1" onblur="InserimentoNumero( C9, 2, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( D1 );" >
+						<input type="text" id="D1" class="D d J" size="1" onblur="InserimentoNumero( D1, 3, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( D2 );" >
+						<input type="text" id="D2" class="D d K" size="1" onblur="InserimentoNumero( D2, 3, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( D3 );" >
+						<input type="text" id="D3" class="D d L" size="1" onblur="InserimentoNumero( D3, 3, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( E1 );" >
+						<input type="text" id="E1" class="E d M" size="1" onblur="InserimentoNumero( E1, 3, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( E2 );" >
+						<input type="text" id="E2" class="E d N" size="1" onblur="InserimentoNumero( E2, 3, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( E3 );" >
+						<input type="text" id="E3" class="E d O" size="1" onblur="InserimentoNumero( E3, 3, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( F1 );" >
+						<input type="text" id="F1" class="F d P" size="1" onblur="InserimentoNumero( F1, 3, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( F2 );" >
+						<input type="text" id="F2" class="F d Q" size="1" onblur="InserimentoNumero( F2, 3, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( F3 );" >
+						<input type="text" id="F3" class="F d R" size="1" onblur="InserimentoNumero( F3, 3, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( D4 );" >
+						<input type="text" id="D4" class="D e J" size="1" onblur="InserimentoNumero( D4, 4, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( D5 );" >
+						<input type="text" id="D5" class="D e K" size="1" onblur="InserimentoNumero( D5, 4, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( D6 );" >
+						<input type="text" id="D6" class="D e L" size="1" onblur="InserimentoNumero( D6, 4, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( E4 );" >
+						<input type="text" id="E4" class="E e M" size="1" onblur="InserimentoNumero( E4, 4, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( E5 );" >
+						<input type="text" id="E5" class="E e N" size="1" onblur="InserimentoNumero( E5, 4, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( E6 );" >
+						<input type="text" id="E6" class="E e O" size="1" onblur="InserimentoNumero( E6, 4, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( F4 );" >
+						<input type="text" id="F4" class="F e P" size="1" onblur="InserimentoNumero( F4, 4, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( F5 );" >
+						<input type="text" id="F5" class="F e Q" size="1" onblur="InserimentoNumero( F5, 4, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( F6 );" >
+						<input type="text" id="F6" class="F e R" size="1" onblur="InserimentoNumero( F6, 4, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( D7 );" >
+						<input type="text" id="D7" class="D f J" size="1" onblur="InserimentoNumero( D7, 5, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( D8 );" >
+						<input type="text" id="D8" class="D f K" size="1" onblur="InserimentoNumero( D8, 5, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( D9 );" >
+						<input type="text" id="D9" class="D f L" size="1" onblur="InserimentoNumero( D9, 5, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( E7 );" >
+						<input type="text" id="E7" class="E f M" size="1" onblur="InserimentoNumero( E7, 5, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( E8 );" >
+						<input type="text" id="E8" class="E f N" size="1" onblur="InserimentoNumero( E8, 5, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( E9 );" >
+						<input type="text" id="E9" class="E f O" size="1" onblur="InserimentoNumero( E9, 5, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( F7 );" >
+						<input type="text" id="F7" class="F f P" size="1" onblur="InserimentoNumero( F7, 5, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( F8 );" >
+						<input type="text" id="F8" class="F f Q" size="1" onblur="InserimentoNumero( F8, 5, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( F9 );" >
+						<input type="text" id="F9" class="F f R" size="1" onblur="InserimentoNumero( F9, 5, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( G1 );" >
+						<input type="text" id="G1" class="G g J" size="1" onblur="InserimentoNumero( G1, 6, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( G2 );" >
+						<input type="text" id="G2" class="G g K" size="1" onblur="InserimentoNumero( G2, 6, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( G3 );" >
+						<input type="text" id="G3" class="G g L" size="1" onblur="InserimentoNumero( G3, 6, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( H1 );" >
+						<input type="text" id="H1" class="H g M" size="1" onblur="InserimentoNumero( H1, 6, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( H2 );" >
+						<input type="text" id="H2" class="H g N" size="1" onblur="InserimentoNumero( H2, 6, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( H3 );" >
+						<input type="text" id="H3" class="H g O" size="1" onblur="InserimentoNumero( H3, 6, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( I1 );" >
+						<input type="text" id="I1" class="I g P" size="1" onblur="InserimentoNumero( I1, 6, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( I2 );" >
+						<input type="text" id="I2" class="I g Q" size="1" onblur="InserimentoNumero( I2, 6, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( I3 );" >
+						<input type="text" id="I3" class="I g R" size="1" onblur="InserimentoNumero( I3, 6, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( G4 );" >
+						<input type="text" id="G4" class="G h J" size="1" onblur="InserimentoNumero( G4, 7, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( G5 );" >
+						<input type="text" id="G5" class="G h K" size="1" onblur="InserimentoNumero( G5, 7, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( G6 );" >
+						<input type="text" id="G6" class="G h L" size="1" onblur="InserimentoNumero( G6, 7, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( H4 );" >
+						<input type="text" id="H4" class="H h M" size="1" onblur="InserimentoNumero( H4, 7, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( H5 );" >
+						<input type="text" id="H5" class="H h N" size="1" onblur="InserimentoNumero( H5, 7, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( H6 );" >
+						<input type="text" id="H6" class="H h O" size="1" onblur="InserimentoNumero( H6, 7, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( I4 );" >
+						<input type="text" id="I4" class="I h P" size="1" onblur="InserimentoNumero( I4, 7, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( I5 );" >
+						<input type="text" id="I5" class="I h Q" size="1" onblur="InserimentoNumero( I5, 7, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( I6 );" >
+						<input type="text" id="I6" class="I h R" size="1" onblur="InserimentoNumero( I6, 7, 8 );" />
+					</td>
+				</tr>
+				<tr>
+					<td onclick="CambiaNumero( G7 );" >
+						<input type="text" id="G7" class="G i J" size="1" onblur="InserimentoNumero( G7, 8, 0 );" />
+					</td>
+					<td onclick="CambiaNumero( G8 );" >
+						<input type="text" id="G8" class="G i K" size="1" onblur="InserimentoNumero( G8, 8, 1 );" />
+					</td>
+					<td onclick="CambiaNumero( G9 );" >
+						<input type="text" id="G9" class="G i L" size="1" onblur="InserimentoNumero( G9, 8, 2 );" />
+					</td>
+					<td onclick="CambiaNumero( H7 );" >
+						<input type="text" id="H7" class="H i M" size="1" onblur="InserimentoNumero( H7, 8, 3 );" />
+					</td>
+					<td onclick="CambiaNumero( H8 );" >
+						<input type="text" id="H8" class="H i N" size="1" onblur="InserimentoNumero( H8, 8, 4 );" />
+					</td>
+					<td onclick="CambiaNumero( H9 );" >
+						<input type="text" id="H9" class="H i O" size="1" onblur="InserimentoNumero( H9, 8, 5 );" />
+					</td>
+					<td onclick="CambiaNumero( I7 );" >
+						<input type="text" id="I7" class="I i P" size="1" onblur="InserimentoNumero( I7, 8, 6 );" />
+					</td>
+					<td onclick="CambiaNumero( I8 );" >
+						<input type="text" id="I8" class="I i Q" size="1" onblur="InserimentoNumero( I8, 8, 7 );" />
+					</td>
+					<td onclick="CambiaNumero( I9 );" >
+						<input type="text" id="I9" class="I i R" size="1" onblur="InserimentoNumero( I9, 8, 8 );" />
+					</td>
+				</tr>
+			</table>
+		</center>
+		<br /><br />
+		<button onclick="Risolvi();" >
+			RISOLVI
+		</button>
+		&nbsp;&nbsp;
+		<button onclick="PulisciTutto();" >
+			PULISCI
+		</button>
+		&nbsp;&nbsp;
+		<button id="controlloMouse" onclick="CambiaMouse( 'pointer' );" >
+			CAMBIA
+		</button>
+		<span style="font-size: 6pt; position: absolute; right: 1%; bottom: 1%" >made BY S117</span>
+	</body>
+</html>
